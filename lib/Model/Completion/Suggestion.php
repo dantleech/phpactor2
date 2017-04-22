@@ -4,11 +4,17 @@ namespace DTL\Phpactor\Model\Completion;
 
 final class Suggestion
 {
+    const TYPE_METHOD = 'method';
+    const TYPE_PROPERTY = 'property';
+
     private $suggestion;
 
-    public function fromString(string $name)
+    public static function fromName(string $name)
     {
-        $this->suggestion = $suggestion;
+        $new = new self();
+        $new->suggestion = $name;
+
+        return $new;
     }
 
     public function __toString()
