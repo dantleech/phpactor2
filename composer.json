@@ -1,0 +1,38 @@
+{
+    "name": "dtl/phpactor",
+    "description": "PHP Introspection and Code Completion",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Leech",
+            "email": "daniel@dantleech.com"
+        }
+    ],
+    "require": {
+        "microsoft/tolerant-php-parser": "@dev",
+        "phpunit/phpunit": "^6.1"
+    },
+    "require-dev": {
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Microsoft/tolerant-php-parser"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DTL\\Phpactor\\": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DTL\\Phpactor\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
