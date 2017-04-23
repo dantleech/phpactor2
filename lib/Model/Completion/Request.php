@@ -15,4 +15,14 @@ final class Request
         $this->source = $source;
         $this->offset = $offset;
     }
+
+    public function getSource() 
+    {
+        return $this->source;
+    }
+
+    public function getOffset() 
+    {
+        return $this->offset;
+    }
 }

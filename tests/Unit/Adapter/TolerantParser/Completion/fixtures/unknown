@@ -1,0 +1,19 @@
+<?php
+
+namespace DTL\Phpactor\Tests\Unit\Adapter\TolerantParser\Completion\fixtures;
+
+class member1
+{
+    private $foobar;
+    private $barfoo;
+
+    public function methodOne()
+    {
+    }
+
+    public function methodTwo()
+    {
+
+__CURSOR__
+    }
+}

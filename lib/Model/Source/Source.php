@@ -15,5 +15,10 @@ class Source
     {
         return $this->source;
     }
+
+    public function __toString()
+    {
+        return $this->source;
+    }
     
 }

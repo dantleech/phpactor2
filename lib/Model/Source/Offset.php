@@ -10,4 +10,9 @@ class Offset
     {
         $this->offset = $offset;
     }
+
+    public function asInt()
+    {
+        return $this->offset;
+    }
 }

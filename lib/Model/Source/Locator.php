@@ -2,9 +2,9 @@
 
 namespace DTL\Phpactor\Model\Source;
 
-use DTL\Phpactor\Model\Reflection\AbsoluteNamespace;
+use DTL\Phpactor\Model\Reflection\FullyQualifiedName;
 
 interface Locator
 {
-    public function fromNamespace(AbsoluteNamespace $namespace);
+    public function locateForClass(FullyQualifiedName $name);
 }

@@ -2,13 +2,15 @@
 
 namespace DTL\Phpactor\Model\Reflection;
 
-class AbsoluteNamespace
+class FullyQualifiedName
 {
     private $parts;
 
-    public function fromString(string $string)
+    public static function fromString(string $string)
     {
-        $this->parts = explode('\\', trim($string));
+        $new = new self();
+        $new->parts = explode('\\', trim($string));
+        return $new;
     }
 
     public function getPartsAsStrings(): array
