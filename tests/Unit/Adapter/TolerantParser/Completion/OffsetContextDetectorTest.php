@@ -10,6 +10,7 @@ use DTL\Phpactor\Model\Source\Offset;
 use DTL\Phpactor\Model\Completion\Request;
 use DTL\Phpactor\Adapter\TolerantParser\Completion\Context\MemberOffsetContext;
 use DTL\Phpactor\Model\Completion\Context\UnknownOffsetContext;
+use DTL\Phpactor\Tests\Util\SourceHelper;
 
 class OffsetContextDetectorTest extends TestCase
 {
@@ -38,9 +39,7 @@ class OffsetContextDetectorTest extends TestCase
     {
         $source = __DIR__ . '/fixtures/' . $name;
         $source = file_get_contents($source);
-        $offset = strpos($source, '__CURSOR__');
-        $source = str_replace('__CURSOR__', '', $source);
 
-        return new Request(new Source($source), new Offset($offset));
+        return SourceHelper::getRequest($source);
     }
 }
